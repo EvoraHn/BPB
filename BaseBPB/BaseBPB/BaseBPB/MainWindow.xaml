@@ -1,0 +1,76 @@
+﻿<Window x:Class="BaseBPB.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BaseBPB"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="1080"  Foreground="{x:Null}" WindowStyle="None" VerticalAlignment="Center" HorizontalAlignment="Center" WindowStartupLocation="CenterScreen" WindowState="Normal" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="89*"/>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="89*"/>
+            <ColumnDefinition Width="89*"/>
+            <ColumnDefinition Width="89*"/>
+            <ColumnDefinition Width="89*"/>
+            <ColumnDefinition Width="89*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <Rectangle Grid.ColumnSpan="13" Grid.Column="1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="57"   VerticalAlignment="Top" Width="1074"  Grid.RowSpan="2" Margin="0,28,0,0"/>
+        <DockPanel Grid.ColumnSpan="5" Grid.Column="1" HorizontalAlignment="Left" Height="701" LastChildFill="False" Grid.RowSpan="12" VerticalAlignment="Top" Width="280" Background="#FF27A382" Margin="0,0,0,-0.333"/>
+
+        <Label Background="{x:Null}" Grid.ColumnSpan="3"  Grid.Column="3" Grid.Row="3" Content="Inventario" FontSize="36" FontWeight="{DynamicResource {x:Static SystemFonts.SmallCaptionFontWeightKey}}" Foreground="White" Margin="10.4,57.2,79.4,0" Grid.RowSpan="2" />
+        <Button Name="BtnVentas" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Margin="0,56.8,88.8,2" Grid.RowSpan="2" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="BtnVentas_Click"  >
+            <Button.Background>
+                <ImageBrush ImageSource="IMAGENES/estante.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Label Background="{x:Null}" Grid.ColumnSpan="3"  Grid.Column="3" Grid.Row="5" Content="Compras" FontSize="36" FontWeight="{DynamicResource {x:Static SystemFonts.SmallCaptionFontWeightKey}}" Foreground="White" Margin="10.4,0,79.4,57.2" Grid.RowSpan="2" />
+        <Label Background="{x:Null}" Grid.ColumnSpan="3"  Grid.Column="2" Grid.Row="7" Content="Ventas" FontSize="36" FontWeight="{DynamicResource {x:Static SystemFonts.SmallCaptionFontWeightKey}}" Foreground="White" Margin="10.2,31.2,71.2,27.533" Grid.RowSpan="2" />
+        <Button x:Name="BtnVentas_Copy" Grid.Column="1" Grid.Row="5" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.ColumnSpan="3" Margin="0,0,89.2,57.2" Grid.RowSpan="2" Click="BtnVentas_Copy_Click"   >
+            <Button.Background>
+                <ImageBrush ImageSource="IMAGENES/bolsa.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BtnVentas_Copy1" Grid.Row="7" Grid.ColumnSpan="6" Margin="0,58.2,81.6,13.667" Foreground="{x:Null}" BorderBrush="{x:Null}" Grid.RowSpan="5" Click="BtnVentas_Copy1_Click"  >
+            <Button.Background>
+                <ImageBrush ImageSource="IMAGENES/venta.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BtnCerrar" Grid.Column="13" Margin="0.067,27,-1.6,30.2" Grid.RowSpan="2" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="BtnVentas_Copy2_Click"  >
+            <Button.Background>
+                <ImageBrush ImageSource="IMAGENES/apagado.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Calendar Grid.Column="11" HorizontalAlignment="Left" Margin="11,44.4,-25.6,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="244" Width="283" Grid.RowSpan="6"/>
+        <Label Name="Relojlbl" Grid.ColumnSpan="7"  Content="Hola " Grid.Column="5" Margin="20.8,6.2,33.8,6" Grid.Row="2" VerticalAlignment="Center" Height="163" Grid.RowSpan="3" FontSize="150" FontFamily="Poplar Std" Background="{x:Null}" FontStretch="Condensed" HorizontalAlignment="Center" FontWeight="Medium" Foreground="#FF004214" Width="575"/>
+
+
+
+
+
+
+    </Grid>
+</Window>
