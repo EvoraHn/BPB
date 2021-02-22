@@ -185,10 +185,5 @@ namespace BaseBPB
                 this.Close();
             }
         }
-
-        private void lbcategoria_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
     }
 }

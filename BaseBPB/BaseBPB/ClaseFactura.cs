@@ -32,11 +32,6 @@ namespace BaseBPB
         {
             try
             {
-
-
-
-
-
                 // Query de inserción
                 string query = @"INSERT INTO Ventas.Venta ( Fecha_Venta,Total_Venta)
                                  VALUES (@Fecha,@Total)";

@@ -11,34 +11,29 @@ namespace BaseBPB
 {
     class ClaseProducto
     {
-        //Conexion Sql
+        //Conexion Sql | para que funcione la conexión simplemente se debe configurar el servidor con el nombre por defecto que es 
+        //SQLEXPRESS
         private static string connectionString = ConfigurationManager.ConnectionStrings["BaseBPB.Properties.Settings.BPBConnectionString"].ConnectionString;
         private SqlConnection sqlConnection = new SqlConnection(connectionString);
 
         //Propiedades
-
         public string IdProducto { get; set; }
         public string NombreProducto { get; set; }
         public int Cantidad { get; set; }
         public int Venta { get; set; }
         public double PrecioVenta { get; set; }
-
         public double Descuento { get; set; }
         public double PrecioCosto { get; set; }
-
         public int Proveedor { get; set; }
         public int Categoria { get; set; }
-
         public string Producto { get; set; }
         public double Cant { get; set; }
-
         public double Total { get; set; }
-
-
 
         //Constructores
         public ClaseProducto() { }
 
+        //Clase Producto
         public ClaseProducto(string Id, string nombre, int cantidad, double venta, double costo, int prov, int cat, double cant, double total)
         {
             IdProducto = Id;
@@ -91,8 +86,7 @@ namespace BaseBPB
             }
         }
 
-
-
+        //Insertar producto es la consulta que se encarga de ingresar un registro en la base de datos
         public void InsertarProducto(ClaseProducto producto)
         {
             try
@@ -129,6 +123,7 @@ namespace BaseBPB
             }
         }
 
+        //Modificar producto es la consulta que se encarga de modificar un registro en la base de datos
         public void ModificarProducto(ClaseProducto producto)
         {
             try
@@ -167,7 +162,7 @@ namespace BaseBPB
             }
         }
 
-
+        //Eliminar producto es la consulta que se encarga de modificar un eliminar en la base de datos
         public void EliminarProducto(ClaseProducto producto)
         {
             try
@@ -195,7 +190,7 @@ namespace BaseBPB
                 sqlConnection.Close();
             }
         }
-
+        //Buscar producto es la consulta que se encarga de buscar un registro en la base de datos
         public ClaseProducto BuscarProducto(string id)
         {
             ClaseProducto habitacion = new ClaseProducto();
@@ -278,9 +273,6 @@ namespace BaseBPB
             }
         }
 
-
-
-
         public void Vender(ClaseProducto producto)
         {
             try
@@ -315,9 +307,7 @@ namespace BaseBPB
             }
         }
 
-
-
-        // SE QUITA UNA CIERTA CANTIDAD DE PRODUCTOS
+        // SE QUITA UNA CIERTA CANTIDAD DE PRODUCTOS al realizar una venta
         public void ModificarExistenciasVenta(ClaseProducto Venta)
         {
             try
@@ -356,7 +346,7 @@ namespace BaseBPB
         }
 
 
-        //SE AGREGA UNA CIERTA CANTIDAD DE PRODUCTOS
+        //SE AGREGA UNA CIERTA CANTIDAD DE PRODUCTOS al realizar una compra de nueva mercancia
         public void ModificarExistenciasCompra(ClaseProducto Compra)
         {
             try
@@ -393,9 +383,5 @@ namespace BaseBPB
 
             }
         }
-
-
-
-
     }
 }
